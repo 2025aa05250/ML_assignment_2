@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import sklearn
 
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler, LabelEncoder
@@ -116,4 +117,5 @@ if uploaded_file:
         st.write(f"**F1 Score:** {row['F1']:.4f}")
         st.write(f"**MCC:** {row['MCC']:.4f}")
 else:
+
     st.info("Please upload a dataset CSV file to proceed.")
